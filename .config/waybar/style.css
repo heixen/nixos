@@ -1,0 +1,158 @@
+/* Keyframes */
+@keyframes blink-warning {
+    70% {
+        color: white;
+    }
+    to {
+        color: white;
+        background-color: orange;
+    }
+}
+
+@keyframes blink-critical {
+    70% {
+        color: white;
+    }
+    to {
+        color: white;
+        background-color: red;
+    }
+}
+
+/* Base styles */
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#waybar {
+    background: rgba(28, 28, 28, 0.7);
+    color: white;
+    font-family: "SF Pro";
+    font-size: 14px;
+}
+
+#battery,
+#clock,
+#cpu,
+#custom-keyboard-layout,
+#memory,
+#network,
+#pulseaudio,
+#temperature,
+#tray {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+/* Module styles */
+#battery {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    font-size: 14px;
+}
+
+#battery.warning {
+    color: orange;
+}
+
+#battery.critical {
+    color: red;
+}
+
+#clock {
+    font-size: 14px;
+}
+
+#cpu {
+    font-size: 14px;
+}
+
+#cpu.warning {
+    color: orange;
+}
+
+#cpu.critical {
+    color: red;
+}
+
+#memory {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    font-size: 14px;
+}
+
+#memory.warning {
+    color: orange;
+}
+
+#memory.critical {
+    color: red;
+    animation-name: blink-critical;
+    animation-duration: 2s;
+}
+
+#network {
+    font-size: 14px;
+}
+
+#network.disconnected {
+    color: orange;
+}
+
+#pulseaudio {
+    font-size: 14px;
+}
+
+#pulseaudio.muted {
+    /* No styles */
+}
+
+#custom-spotify {
+    color: rgb(102, 220, 105);
+}
+
+#temperature {
+    font-size: 14px;
+}
+
+#temperature.critical {
+    color: red;
+}
+
+#tray {
+    /* No styles */
+}
+
+#window {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#workspaces button {
+    border-top: 2px solid transparent;
+    padding-bottom: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    color: #888888;
+}
+
+#workspaces button.active {
+    color: white;
+}
+
+#workspaces button.focused {
+    border-color: #4c7899;
+    color: white;
+    background-color: #285577;
+}
+
+#workspaces button.urgent {
+    border-color: #c9545d;
+    color: #c9545d;
+}

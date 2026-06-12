@@ -1,0 +1,21 @@
+# Ignore everything
+*
+
+# Keep gitignore
+!.gitignore
+
+# Allow selected configs
+!hypr/
+!waybar/
+!nvim/
+!sway/
+!kitty/
+!fuzzel/
+
+# Track contents inside them
+!hypr/**
+!waybar/**
+!nvim/**
+!sway/**
+!kitty/**
+!fuzzel/**

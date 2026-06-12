@@ -1,0 +1,147 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 28,
+    // "output": "HDMI-A-1",
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right": [
+        "cpu",
+        "memory",
+        "network",
+        "bluetooth",
+        "pulseaudio",
+        "battery",
+        "clock#date",
+        "tray"
+    ],
+    "battery": {
+        "interval": 10,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": " {icon} {capacity}%",
+        "format-discharging": "{icon} {capacity}%",
+        "format-icons": [
+            " ",
+            " ",
+            " ",
+            " ",
+            " "
+        ],
+        "tooltip": true,
+        "tooltip-format": "{timeTo} : {capacity}%"
+    },
+    "clock#date": {
+        "interval": 10,
+        "format": "{:%a %b %e %R}",
+        "tooltip-format": "{:%e %B %Y}",
+        "on-click": "exec gnome-calendar"
+    },
+    "cpu": {
+        "interval": 5,
+        "format": "{icon} {usage}%",
+        "format-icons": [" "],
+        "states": {
+            "warning": 70,
+            "critical": 90
+        }
+    },
+    "custom/keyboard-layout": {
+        "exec": "hyprctl -j devices | jq -r '.keyboards[0].active_keymap // \"Unknown\"'",
+        "interval": 30,
+        "format": "  {}",
+        "tooltip": false
+    },
+    "memory": {
+        "interval": 5,
+        "format": "  {}%",
+        "states": {
+            "warning": 70,
+            "critical": 90
+        }
+    },
+    "network": {
+        "interval": 2,
+        "format-wifi": "   {bandwidthDownBytes} ↓ {bandwidthUpBytes} ↑",
+        "format-ethernet": "  {bandwidthDownBytes} ↓ {bandwidthUpBytes} ↑",
+        "format-disconnected": "⚠  Disconnected",
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr}\nDown: {bandwidthDownBytes}\nUp: {bandwidthUpBytes}",
+        "format-icons": {
+            "wifi": ["", "", ""],
+            "ethernet": [""],
+            "disconnected": [""]
+        },
+        "on-click": "kitty nmtui"
+    },
+    "hyprland/window": {
+        "format": "{class}",
+        "icon": true,
+        "icon-size": 20
+    },
+    "hyprland/workspaces": {
+        "all-outputs": false,
+        "disable-scroll": true,
+        "format": "{icon}",
+        "format-icons": {
+            "urgent": "",
+            "active": "⬤",
+            "default": "◯"
+        }
+    },
+    "pulseaudio": {
+      "format": "{icon}   {volume}%",
+      "format-muted": "",
+      "format-bluetooth": "{icon} {volume}% ",
+      "scroll-step": 5,
+      "on-click": "pavucontrol",
+      "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",   // optional: quicker mute
+      "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+      "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+      "format-icons": {
+          "headphone": "",
+          "handsfree": "",
+          "headset": "",
+          "phone": "",
+          "portable": "",
+          "car": "",
+          "default": ["", ""]
+      },
+      "tooltip": true,
+      "tooltip-format": "{desc}\nVolume: {volume}%"
+    },
+    "bluetooth": {
+        "format-on": "󰂯",
+        "format-off": "BT-off",
+        "format-disabled": "󰂲",
+        "format-connected-battery": "{device_battery_percentage}% 󰂯",
+        "format-alt": "{device_alias} 󰂯",
+        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\n{device_address}\n{device_battery_percentage}%",
+        "on-click-right": "kitty bluetuith"
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "interval": 5,
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tooltip": true
+    },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    }
+}
