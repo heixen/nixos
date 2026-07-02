@@ -27,6 +27,7 @@ return {
       clangd = {
         cmd = {
           "clangd",
+          "--query-driver=/nix/store/*/bin/*",
         },
       },
       pyright = {
