@@ -96,10 +96,6 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
-
-  # steam
-  programs.steam.enable = true;
-
   # audio
   security.rtkit.enable = true; # Allows realtime priority (important for audio)
 
@@ -147,6 +143,7 @@
       gawk
       bc
       gnome-calendar
+      sweethome3d.application
     ];
   };
   # in configuration.nix
@@ -193,6 +190,13 @@
     vim
     man-pages
     linux-manual
+    tree-sitter
+    #
+    lazygit
+    fzf
+    fd
+
+
 
     #################################################
     # Terminal Utilities
@@ -289,7 +293,15 @@
     gnome-calculator
     cheese
     fd
-    
+    cronie
+
+    #################################################
+    # cursor
+    #################################################
+    rose-pine-gtk-theme
+    rose-pine-hyprcursor
+    rose-pine-cursor
+    rose-pine-icon-theme
   ];
 
   nix.gc = {

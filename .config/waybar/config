@@ -15,6 +15,7 @@
         "network",
         "bluetooth",
         "pulseaudio",
+        "backlight",
         "battery",
         "clock#date",
         "tray"
@@ -114,6 +115,19 @@
       },
       "tooltip": true,
       "tooltip-format": "{desc}\nVolume: {volume}%"
+    },
+    "backlight": {
+      "device": "intel_backlight",
+      "format": "{icon} {percent}%",
+      "format-icons": [
+          "󰃞",
+          "󰃟",
+          "󰃠"
+      ],
+      "scroll-step": 5,
+      "on-scroll-up": "brightnessctl set +5%",
+      "on-scroll-down": "brightnessctl set 5%-",
+      "tooltip": true
     },
     "bluetooth": {
         "format-on": "󰂯",
