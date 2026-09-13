@@ -118,6 +118,12 @@
 
   services.gvfs.enable = true;
 
+  # virtualmachine
+  # virtualisation.virtualbox.host = {
+  #   enable = true;
+  #   enableExtensionPack = true;
+  # };
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.markjake = {
     isNormalUser = true;
@@ -127,11 +133,11 @@
       "wheel"
       "input"
       "audio"
+      # "vboxusers"
     ];
     packages = with pkgs; [
       git
       kitty
-      vscode
       mpv
       neovim
       nodejs_24
@@ -142,8 +148,6 @@
       coreutils
       gawk
       bc
-      gnome-calendar
-      sweethome3d.application
     ];
   };
   # in configuration.nix
@@ -182,7 +186,8 @@
     wl-clipboard
     brightnessctl
     waybar
-    swww
+    awww
+    hyprlock
 
     #################################################
     # Editors & Documentation
@@ -291,6 +296,7 @@
     # others
     #################################################
     gnome-calculator
+    gsimplecal
     cheese
     fd
     cronie
@@ -298,10 +304,15 @@
     #################################################
     # cursor
     #################################################
-    rose-pine-gtk-theme
     rose-pine-hyprcursor
     rose-pine-cursor
     rose-pine-icon-theme
+    #################################################
+    # themes
+    #################################################
+    adwaita-icon-theme
+    hicolor-icon-theme
+
   ];
 
   nix.gc = {

@@ -7,10 +7,10 @@ local mainMod = "SUPER"
 
 -- Monitors
 hl.monitor({
-  output = "eDP-1",
-  mode = "1360x768@60",
-  position = "0x0",
-  scale = "1",
+    output = "eDP-1",
+    mode = "1360x768@60",
+    position = "0x0",
+    scale = "1",
 })
 
 -- Environment variables
@@ -19,8 +19,8 @@ hl.env("HYPRCURSOR_SIZE", "24")
 
 -- Curves & Animations
 hl.curve("myBezier", {
-  type = "bezier",
-  points = { { 0.05, 0.9 }, { 0.1, 1.05 } }
+    type = "bezier",
+    points = { { 0.05, 0.9 }, { 0.1, 1.05 } }
 })
 
 hl.animation({ leaf = "windows", enabled = true, speed = 7, bezier = "myBezier" })
@@ -32,23 +32,23 @@ hl.animation({ leaf = "workspaces", enabled = true, speed = 6, bezier = "default
 
 -- Gestures
 hl.gesture({
-  fingers = 3,
-  direction = "horizontal",
-  action = "workspace",
+    fingers = 3,
+    direction = "horizontal",
+    action = "workspace",
 })
 
 -- Window Rules
 hl.window_rule({
-  match = { class = "kitty" },
-  float = true,
+    match = { class = "kitty" },
+    float = true,
 })
 
 -- Layer Rules
 hl.layer_rule({
-  match = { namespace = "fuzzel" },
-  blur = true,
-  ignore_alpha = 0.1,
-  animation = "slide top",
+    match = { namespace = "fuzzel" },
+    blur = true,
+    ignore_alpha = 0.1,
+    animation = "slide top",
 })
 
 -- Keybinds
@@ -59,6 +59,7 @@ hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("dolphin"))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("hyprlauncher")) -- assuming this is your $menu
 hl.bind(mainMod .. " + F", hl.dsp.exec_cmd("fuzzel drun"))
+hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("hyprlock"))
 
 -- More binds (I kept most of yours)
 hl.bind(mainMod .. " + G", hl.dsp.window.fullscreen())
@@ -75,7 +76,7 @@ hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ to
 
 -- Screenshot
 hl.bind(mainMod .. " + I",
-  hl.dsp.exec_cmd('grim "$(date +"%Y-%m-%d_%H:%M:%S.png")" && notify-send "Grim" "$(date +"%Y-%m-%d_%H:%M:%S.png")"'))
+    hl.dsp.exec_cmd('grim "$(date +"%Y-%m-%d_%H:%M:%S.png")" && notify-send "Grim" "$(date +"%Y-%m-%d_%H:%M:%S.png")"'))
 
 -- Navigation
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
@@ -85,8 +86,8 @@ hl.bind(mainMod .. " + down", hl.dsp.focus({ direction = "down" }))
 hl.bind(mainMod .. " + Tab", hl.dsp.focus({ direction = "right" }))
 
 for i = 1, 9 do
-  hl.bind(mainMod .. " + " .. i, hl.dsp.focus({ workspace = i }))
-  hl.bind(mainMod .. " + SHIFT + " .. i, hl.dsp.window.move({ workspace = i }))
+    hl.bind(mainMod .. " + " .. i, hl.dsp.focus({ workspace = i }))
+    hl.bind(mainMod .. " + SHIFT + " .. i, hl.dsp.window.move({ workspace = i }))
 end
 hl.bind(mainMod .. " + 0", hl.dsp.focus({ workspace = 10 }))
 hl.bind(mainMod .. " + SHIFT + 0", hl.dsp.window.move({ workspace = 10 }))
@@ -116,50 +117,50 @@ hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ x = 0, y = 100, relative
 
 -- General Settings
 hl.config({
-  input = {
-    kb_layout = "us, ru, ara",
-    kb_options = "grp:alt_shift_toggle",
-    follow_mouse = 1,
-    touchpad = { natural_scroll = true },
-    sensitivity = 0,
-  },
-  general = {
-    gaps_in = 0,
-    gaps_out = 0,
-    border_size = 0,
-    col = {
-      active_border = { colors = { "rgba(7EBAE4ee)", "rgba(5277C3ee)" }, angle = 45 },
-      inactive_border = "rgba(595959aa)",
+    input = {
+        kb_layout = "us, ru, ara",
+        kb_options = "grp:alt_shift_toggle",
+        follow_mouse = 1,
+        touchpad = { natural_scroll = true },
+        sensitivity = 0,
     },
-    layout = "dwindle",
-    allow_tearing = false,
-  },
-  decoration = {
-    rounding = 0,
-    blur = {
-      enabled = true,
-      size = 10,
-      passes = 3,
-      ignore_opacity = false,
+    general = {
+        gaps_in = 0,
+        gaps_out = 0,
+        border_size = 0,
+        col = {
+            active_border = { colors = { "rgba(7EBAE4ee)", "rgba(5277C3ee)" }, angle = 45 },
+            inactive_border = "rgba(595959aa)",
+        },
+        layout = "dwindle",
+        allow_tearing = false,
     },
-    shadow = {
-      range = 4,
-      render_power = 3,
-      color = "rgba(1a1a1aee)",
+    decoration = {
+        rounding = 0,
+        blur = {
+            enabled = true,
+            size = 10,
+            passes = 3,
+            ignore_opacity = false,
+        },
+        shadow = {
+            range = 4,
+            render_power = 3,
+            color = "rgba(1a1a1aee)",
+        },
     },
-  },
-  animations = { enabled = true },
-  dwindle = { preserve_split = true },
-  master = { new_status = "true" },
-  misc = { force_default_wallpaper = 0 },
+    animations = { enabled = true },
+    dwindle = { preserve_split = true },
+    master = { new_status = "true" },
+    misc = { force_default_wallpaper = 0 },
 })
 
 -- Startup
 hl.on("hyprland.start", function()
-  hl.exec_cmd("~/.config/hypr/scripts/suspend.sh")
-  hl.exec_cmd("waybar")
-  hl.exec_cmd("awww-daemon")
-  hl.exec_cmd("awww img ~/wallpapers/a.jpg")
-  hl.exec_cmd("wl-paste -t text --watch clipman store --no-persist")
-  hl.exec_cmd("udiskie")
+    hl.exec_cmd("~/.config/hypr/scripts/suspend.sh")
+    hl.exec_cmd("waybar")
+    hl.exec_cmd("awww-daemon")
+    hl.exec_cmd("awww img ~/wallpapers/b.jpg")
+    hl.exec_cmd("wl-paste -t text --watch clipman store --no-persist")
+    hl.exec_cmd("udiskie")
 end)

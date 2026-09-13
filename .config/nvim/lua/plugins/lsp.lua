@@ -1,47 +1,50 @@
 return {
-  "neovim/nvim-lspconfig",
-  opts = {
-    servers = {
-      ts_ls = {},
-      tailwindcss = {},
-      eslint = {},
+    {
+        "neovim/nvim-lspconfig",
+        event = { "BufReadPre", "BufNewFile" },
+        config = function()
+            local capabilities = require("blink.cmp").get_lsp_capabilities()
 
-      nixd = {
-        settings = {
-          nixd = {
-            formatting = {
-              command = nil,
-            },
-          },
-        },
-      },
-      lua_ls = {
-        settings = {
-          Lua = {
-            diagnostics = {
-              globals = { "hl" },
-            },
-          },
-        },
-      },
-      clangd = {
-        cmd = {
-          "clangd",
-          "--query-driver=/nix/store/*/bin/*",
-        },
-      },
-      pyright = {
-        cmd = { "pyright-langserver", "--stdio" },
-        settings = {
-          python = {
-            analysis = {
-              typeCheckingMode = "basic",
-              autoSearchPaths = true,
-              useLibraryCodeForTypes = true,
-            },
-          },
-        },
-      },
+            vim.lsp.config("lua_ls", {
+                cmd = { "lua-language-server" },
+                capabilities = capabilities,
+                settings = {
+                    Lua = {
+                        diagnostics = {
+                            globals = { "vim" },
+                        },
+                    },
+                },
+            })
+
+            vim.lsp.config("clangd", {
+                capabilities = capabilities,
+                cmd = { "clangd" },
+            })
+
+            vim.lsp.config("pyright", {
+                capabilities = capabilities,
+                cmd = {
+                    "pyright-langserver",
+                    "--stdio",
+                },
+                settings = {
+                    python = {
+                        analysis = {
+                            autoSearchPaths = true,
+                            useLibraryCodeForTypes = true,
+                            diagnosticMode = "workspace",
+                            typeCheckingMode = "basic",
+                        },
+                    },
+                },
+            })
+
+            vim.lsp.enable({
+                "lua_ls",
+                "clangd",
+                "pyright",
+            })
+        end,
     },
-  },
 }
