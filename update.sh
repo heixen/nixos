@@ -1,5 +1,10 @@
-cp -r ~/.config/* .config
+#!/usr/bin/env bash
+set -e
 
-cp -r ~/wallpapers/* ./images
+mkdir -p .config images nixos
 
-cp -r /etc/nixos/* .
+cp -a ~/.config/. .config/
+cp -a ~/wallpapers/. images/
+sudo cp -a /etc/nixos/. nixos/
+
+echo "Backup complete."

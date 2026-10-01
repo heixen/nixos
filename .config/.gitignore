@@ -1,21 +1,41 @@
-# Ignore everything
+# Ignore everything in .config
 *
 
-# Keep gitignore
+# Keep the configurations I care about
 !.gitignore
 
-# Allow selected configs
-!hypr/
-!waybar/
-!nvim/
-!sway/
-!kitty/
-!fuzzel/
+!fish/
+!fish/**
 
-# Track contents inside them
-!hypr/**
-!waybar/**
-!nvim/**
-!sway/**
-!kitty/**
+!fuzzel/
 !fuzzel/**
+
+!helix/
+!helix/**
+
+!hypr/
+!hypr/**
+
+!kitty/
+!kitty/**
+
+!nvim/
+!nvim/**
+
+!waybar/
+!waybar/**
+
+!sway/
+!sway/**
+
+!mpv/
+!mpv/**
+
+!btop/
+!btop/**
+
+!bluetuith/
+!bluetuith/**
+
+!easyeffects/
+!easyeffects/**
