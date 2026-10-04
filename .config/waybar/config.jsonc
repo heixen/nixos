@@ -10,9 +10,9 @@
         "hyprland/window"
     ],
     "modules-right": [
-        "cpu",
-        "memory",
-        "network",
+        "custom/cava",
+        "custom/resources",
+        // "network",
         "bluetooth",
         "pulseaudio",
         "backlight",
@@ -40,18 +40,20 @@
     },
     "clock#date": {
         "interval": 10,
-        "format": "{:%a %b %e %R}",
+        "format": "{:%a %b%e %R}",
         "tooltip-format": "{:%e %B %Y}",
         "on-click": "gsimplecal"
     },
-    "cpu": {
-        "interval": 5,
-        "format": "{icon} {usage}%",
-        "format-icons": [" "],
-        "states": {
-            "warning": 70,
-            "critical": 90
-        }
+    "custom/cava": {
+        "exec": "~/.config/waybar/scripts/cava.sh",
+        "format": "{}",
+        "return-type": "raw"
+    },
+    "custom/resources": {
+        "exec": "~/.config/waybar/scripts/resources.sh",
+        "interval": 2,
+        "format": "{}",
+        "return-type": "raw"
     },
     "custom/keyboard-layout": {
         "exec": "hyprctl -j devices | jq -r '.keyboards[0].active_keymap // \"Unknown\"'",
@@ -59,27 +61,16 @@
         "format": "  {}",
         "tooltip": false
     },
-    "memory": {
-        "interval": 5,
-        "format": "  {}%",
-        "states": {
-            "warning": 70,
-            "critical": 90
-        }
-    },
     "network": {
         "interval": 2,
-        "format-wifi": "   {bandwidthDownBytes} ↓ {bandwidthUpBytes} ↑",
-        "format-ethernet": "  {bandwidthDownBytes} ↓ {bandwidthUpBytes} ↑",
-        "format-disconnected": "󰤭",
+        "format-wifi": "  {bandwidthDownBytes} ↓ {bandwidthUpBytes} ↑",
+        "format-ethernet": "󰈀 {bandwidthDownBytes} ↓ {bandwidthUpBytes} ↑",
+        "format-disconnected": "󰤭 ",
         "tooltip-format": "{ifname}\n↓ {bandwidthDownBytes}\n↑ {bandwidthUpBytes}",
-        "format-icons": {
-            "wifi": ["", "", ""],
-            "ethernet": [""],
-            "disconnected": [""]
-        },
         "on-click": "kitty nmtui"
     },
+
+
     "hyprland/window": {
         "format": "",
         "icon": true,
@@ -97,38 +88,38 @@
         }
     },
     "pulseaudio": {
-      "format": "{icon}   {volume}%",
-      "format-muted": "",
-      "format-bluetooth": "{icon} {volume}% ",
-      "scroll-step": 5,
-      "on-click": "pavucontrol",
-      "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",   // optional: quicker mute
-      "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
-      "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
-      "format-icons": {
-          "headphone": "",
-          "handsfree": "",
-          "headset": "",
-          "phone": "",
-          "portable": "",
-          "car": "",
-          "default": ["", ""]
-      },
-      "tooltip": true,
-      "tooltip-format": "{desc}\nVolume: {volume}%"
+        "format": "{icon} ",
+        "format-muted": "",
+        "format-bluetooth": "{icon} {volume}% ",
+        "scroll-step": 5,
+        "on-click": "pavucontrol",
+        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",   // optional: quicker mute
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+        "format-icons": {
+            "headphone": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "tooltip": true,
+        "tooltip-format": "{desc}\nVolume: {volume}%"
     },
     "backlight": {
-      "device": "intel_backlight",
-      "format": "{icon}  {percent}%",
-      "format-icons": [
-          "󰃞",
-          "󰃟",
-          "󰃠"
-      ],
-      "scroll-step": 5,
-      "on-scroll-up": "brightnessctl set +5%",
-      "on-scroll-down": "brightnessctl set 5%-",
-      "tooltip": true
+        "device": "intel_backlight",
+        "format": "{icon} ",
+        "format-icons": [
+            "󰃞",
+            "󰃟",
+            "󰃠"
+        ],
+        "scroll-step": 5,
+        "on-scroll-up": "brightnessctl set +5%",
+        "on-scroll-down": "brightnessctl set 5%-",
+        "tooltip": true
     },
     "bluetooth": {
         "format-on": "󰂯",

@@ -1,5 +1,4 @@
 { config, pkgs, ... }:
-
 {
   imports = [
     ./hardware-configuration.nix
@@ -44,25 +43,24 @@
   fonts.packages = with pkgs; [
     font-awesome
     font-awesome_5
-    nerd-fonts.droid-sans-mono
-    nerd-fonts.fira-code
+    # nerd-fonts.droid-sans-mono
+    # nerd-fonts.fira-code
     # (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono"]; })
+    nerd-fonts.jetbrains-mono
   ];
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
   # services.xserver.enable = true;
   programs.hyprland = {
-  	enable = true;
-	withUWSM = true;
+    enable = true;
+    withUWSM = true;
   };
-  # services.displayManager.ly.enable = true;
+  services.displayManager.ly.enable = true;
   # services.displayManager.defaultSession = "hyprland-uwsm";
 
-
-  
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.wayland.enable = true;
+  # services.displayManager.sddm.enable = true;
+  # services.displayManager.sddm.wayland.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
   # services.displayManager.sddm.enable = true;
@@ -158,6 +156,7 @@
       coreutils
       gawk
       bc
+      microsoft-edge
     ];
   };
   # in configuration.nix
@@ -198,6 +197,8 @@
     waybar
     awww
     hyprlock
+    cava
+    peaclock
 
     #################################################
     # Editors & Documentation
@@ -210,8 +211,6 @@
     lazygit
     fzf
     fd
-
-
 
     #################################################
     # Terminal Utilities
@@ -310,6 +309,8 @@
     cheese
     fd
     cronie
+    bat
+    cbonsai
 
     #################################################
     # cursor
@@ -361,9 +362,6 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "25.05"; # Did you read the comment?
+  system.stateVersion = "26.05"; # Did you read the comment?
 
 }
-
-
-

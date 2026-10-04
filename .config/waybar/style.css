@@ -19,7 +19,7 @@
     }
 }
 
-/* Base styles */
+/* Base */
 * {
     border: none;
     border-radius: 0;
@@ -36,20 +36,46 @@
     font-size: 14px;
 }
 
+/* =========================
+   General module spacing
+   ========================= */
+
 #battery,
 #clock,
-#cpu,
-#custom-keyboard-layout,
-#memory,
+#custom-resources,
 #network,
 #pulseaudio,
 #temperature,
-#tray {
+#tray,
+#bluetooth {
     padding-left: 6px;
     padding-right: 6px;
 }
 
-/* Module styles */
+/* =========================
+   CAVA
+   ========================= */
+
+#custom-cava {
+    color: #89b4fa;
+    padding: 0 6px;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 11px;
+}
+
+/* =========================
+   Resources
+   ========================= */
+
+#custom-resources {
+    padding: 0 6px;
+    font-size: 14px;
+}
+
+/* =========================
+   Battery
+   ========================= */
+
 #battery {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
@@ -65,38 +91,17 @@
     color: red;
 }
 
+/* =========================
+   Clock
+   ========================= */
+
 #clock {
     font-size: 14px;
 }
 
-#cpu {
-    font-size: 14px;
-}
-
-#cpu.warning {
-    color: orange;
-}
-
-#cpu.critical {
-    color: red;
-}
-
-#memory {
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    font-size: 14px;
-}
-
-#memory.warning {
-    color: orange;
-}
-
-#memory.critical {
-    color: red;
-    animation-name: blink-critical;
-    animation-duration: 2s;
-}
+/* =========================
+   Network
+   ========================= */
 
 #network {
     font-size: 14px;
@@ -106,17 +111,33 @@
     color: orange;
 }
 
+/* =========================
+   Audio
+   ========================= */
+
 #pulseaudio {
     font-size: 14px;
 }
 
-#pulseaudio.muted {
-    /* No styles */
+/* =========================
+   Bluetooth
+   ========================= */
+
+#bluetooth {
+    font-size: 14px;
 }
 
-#custom-spotify {
-    color: rgb(102, 220, 105);
+/* =========================
+   Backlight
+   ========================= */
+
+#backlight {
+    padding: 0 6px;
 }
+
+/* =========================
+   Temperature
+   ========================= */
 
 #temperature {
     font-size: 14px;
@@ -126,14 +147,26 @@
     color: red;
 }
 
+/* =========================
+   Tray
+   ========================= */
+
 #tray {
-    /* No styles */
+    /* No additional styles */
 }
+
+/* =========================
+   Window
+   ========================= */
 
 #window {
     font-weight: bold;
     font-size: 14px;
 }
+
+/* =========================
+   Workspaces
+   ========================= */
 
 #workspaces button {
     border-top: 2px solid transparent;
@@ -157,3 +190,4 @@
     border-color: #c9545d;
     color: #c9545d;
 }
+
