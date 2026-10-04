@@ -7,6 +7,9 @@
   hardware.bluetooth.enable = true;
   hardware.graphics.enable = true;
 
+  services.power-profiles-daemon.enable = true;
+  services.upower.enable = true;
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -184,6 +187,7 @@
     #################################################
     # Wayland / Sway
     #################################################
+    noctalia
     foot
     wofi
     fuzzel

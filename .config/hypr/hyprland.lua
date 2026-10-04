@@ -158,9 +158,13 @@ hl.config({
 -- Startup
 hl.on("hyprland.start", function()
     hl.exec_cmd("~/.config/hypr/scripts/suspend.sh")
-    hl.exec_cmd("waybar")
+    -- hl.exec_cmd("waybar")
     hl.exec_cmd("awww-daemon")
-    hl.exec_cmd("awww img ~/wallpapers/b.jpg")
+    -- hl.exec_cmd("awww img ~/wallpapers/b.jpg")
     hl.exec_cmd("wl-paste -t text --watch clipman store --no-persist")
     hl.exec_cmd("udiskie")
+    hl.exec_cmd("noctalia")
 end)
+
+-- For Noctalia Color templates
+require("noctalia").apply_theme()

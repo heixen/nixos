@@ -1,0 +1,14 @@
+[General]
+LastUsedVersion=210800
+
+[MainWindow]
+MenuBar=Disabled
+
+[Recent Files]
+File1[$e]=$HOME/2026-10-03_08:00:48.png
+File2[$e]=$HOME/2026-10-03_17:18:55.png
+Name1[$e]=2026-10-03_08:00:48.png
+Name2[$e]=2026-10-03_17:18:55.png
+
+[SideBar]
+InformationSplitterSizes=206,247
