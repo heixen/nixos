@@ -99,7 +99,7 @@ widget_order = [
         [desktop_widgets.widget.desktop-widget-0000000000000004.settings]
         background = true
         background_color = "surface"
-        background_opacity = 0.10000000000000001
+        background_opacity = 0.29999999999999999
         background_padding = 10
         background_radius = 12
         color = "primary"
@@ -131,7 +131,7 @@ widget_order = [
         [desktop_widgets.widget.desktop-widget-0000000000000005.settings]
         background = true
         background_color = "surface"
-        background_opacity = 0.10000000000000001
+        background_opacity = 0.29999999999999999
         background_padding = 10
         background_radius = 12
         color = "primary"
@@ -163,7 +163,7 @@ widget_order = [
         [desktop_widgets.widget.desktop-widget-0000000000000006.settings]
         background = true
         background_color = "surface"
-        background_opacity = 0.10000000000000001
+        background_opacity = 0.29999999999999999
         background_padding = 10
         background_radius = 12
         color = "primary"
@@ -258,13 +258,13 @@ wallpaper_scheme = "soft"
 directory = "/home/markjake/wallpapers"
 
     [wallpaper.default]
-    path = "/home/markjake/wallpapers/b.jpg"
+    path = "/home/markjake/wallpapers/wp12329537-nixos-wallpapers.png"
 
     [wallpaper.last]
-    path = "/home/markjake/wallpapers/b.jpg"
+    path = "/home/markjake/wallpapers/wp12329537-nixos-wallpapers.png"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/markjake/wallpapers/b.jpg"
+    path = "/home/markjake/wallpapers/wp12329537-nixos-wallpapers.png"
 
     [[wallpaper.favorite]]
     path = "/home/markjake/wallpapers/wallhaven-k8jrq7.jpg"

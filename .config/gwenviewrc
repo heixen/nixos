@@ -9,11 +9,13 @@ MenuBar=Disabled
 File1[$e]=$HOME/2026-10-03_08:00:48.png
 File2[$e]=$HOME/2026-10-03_17:18:55.png
 File3[$e]=$HOME/Downloads/photo_5220011288178658652_y.jpg
+File4[$e]=$HOME/2026-10-05_15:30:04.png
 Name1[$e]=2026-10-03_08:00:48.png
 Name2[$e]=2026-10-03_17:18:55.png
 Name3[$e]=photo_5220011288178658652_y.jpg
+Name4[$e]=2026-10-05_15:30:04.png
 
 [SideBar]
 InformationSplitterSizes=216,259
 IsVisible ViewMode=true
-SideBarSplitterSizes=200,230
+SideBarSplitterSizes=200,476
