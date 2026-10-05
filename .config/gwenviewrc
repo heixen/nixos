@@ -1,5 +1,6 @@
 [General]
 LastUsedVersion=210800
+SideBarPage=operations
 
 [MainWindow]
 MenuBar=Disabled
@@ -7,8 +8,12 @@ MenuBar=Disabled
 [Recent Files]
 File1[$e]=$HOME/2026-10-03_08:00:48.png
 File2[$e]=$HOME/2026-10-03_17:18:55.png
+File3[$e]=$HOME/Downloads/photo_5220011288178658652_y.jpg
 Name1[$e]=2026-10-03_08:00:48.png
 Name2[$e]=2026-10-03_17:18:55.png
+Name3[$e]=photo_5220011288178658652_y.jpg
 
 [SideBar]
-InformationSplitterSizes=206,247
+InformationSplitterSizes=216,259
+IsVisible ViewMode=true
+SideBarSplitterSizes=200,230

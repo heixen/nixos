@@ -40,10 +40,44 @@ return {
                 },
             })
 
+            -- TypeScript / JavaScript / Next.js
+            vim.lsp.config("ts_ls", {
+                capabilities = capabilities,
+                cmd = {
+                    "typescript-language-server",
+                    "--stdio",
+                },
+            })
+
+            -- Tailwind CSS
+            vim.lsp.config("tailwindcss", {
+                capabilities = capabilities,
+                cmd = {
+                    "tailwindcss-language-server",
+                    "--stdio",
+                },
+            })
+
+            -- ESLint
+            vim.lsp.config("eslint", {
+                capabilities = capabilities,
+                cmd = {
+                    "vscode-eslint-language-server",
+                    "--stdio",
+                },
+            })
+
+
+
             vim.lsp.enable({
                 "lua_ls",
                 "clangd",
                 "pyright",
+
+                -- Next.js
+                "ts_ls",
+                "tailwindcss",
+                "eslint",
             })
         end,
     },

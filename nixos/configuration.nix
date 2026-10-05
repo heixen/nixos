@@ -159,7 +159,12 @@
       coreutils
       gawk
       bc
-      microsoft-edge
+      discord
+      gnome-calendar
+      spotify
+
+      ### compiler
+      python315
     ];
   };
   # in configuration.nix
@@ -203,6 +208,7 @@
     hyprlock
     cava
     peaclock
+    playerctl
 
     #################################################
     # Editors & Documentation

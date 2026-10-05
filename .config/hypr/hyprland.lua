@@ -58,7 +58,8 @@ hl.bind(mainMod .. " + M", hl.dsp.exit())
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("dolphin"))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("hyprlauncher")) -- assuming this is your $menu
-hl.bind(mainMod .. " + F", hl.dsp.exec_cmd("fuzzel drun"))
+-- hl.bind(mainMod .. " + F", hl.dsp.exec_cmd("fuzzel drun"))
+hl.bind(mainMod .. " + F", hl.dsp.exec_cmd("noctalia msg panel-toggle launcher"))
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("hyprlock"))
 
 -- More binds (I kept most of yours)
@@ -165,6 +166,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("udiskie")
     hl.exec_cmd("noctalia")
 end)
+
 
 -- For Noctalia Color templates
 require("noctalia").apply_theme()
