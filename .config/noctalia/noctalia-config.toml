@@ -1,0 +1,319 @@
+[bar]
+order = [ "default" ]
+
+    [bar.default]
+    background_opacity = 0.2799999937415123
+    border = "primary"
+    end = [
+        "widget_2",
+        "media",
+        "tray",
+        "notifications",
+        "clipboard",
+        "network",
+        "bluetooth",
+        "volume",
+        "brightness",
+        "battery",
+        "control-center",
+        "session"
+    ]
+    margin_ends = 0
+    radius = 0
+    shadow = false
+    start = [ "group:g1", "workspaces", "lyrics" ]
+
+        [[bar.default.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        border_width = 1.0
+        enabled = true
+        fill = "surface_variant"
+        id = "g1"
+        members = [ "wallpaper", "wallhaven", "mpvpaper" ]
+        opacity = 1.0
+        padding = 6.0
+
+[control_center]
+show_shortcut_labels = false
+
+[desktop_widgets]
+schema_version = 2
+widget_order = [
+    "desktop-widget-0000000000000002",
+    "desktop-widget-0000000000000004",
+    "desktop-widget-0000000000000005",
+    "desktop-widget-0000000000000006"
+]
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000002]
+    box_height = 48.0
+    box_width = 128.0
+    cx = 680.0
+    cy = 384.0
+    output = "eDP-1"
+    placement_height = 768.0
+    placement_width = 1360.0
+    rotation = 0.0
+    type = "audio_visualizer"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000002.settings]
+        background = false
+        background_color = "surface"
+        background_opacity = 0.80000000000000004
+        background_padding = 10
+        background_radius = 12
+        bands = 32
+        centered = true
+        color_1 = "secondary"
+        color_2 = "on_primary"
+        mirrored = true
+        reversed = false
+        show_when_idle = false
+
+    [desktop_widgets.widget.desktop-widget-0000000000000003]
+    box_height = 144.0
+    box_width = 336.0
+    cx = 680.0
+    cy = 192.0
+    output = "eDP-1"
+    placement_height = 768.0
+    placement_width = 1360.0
+    rotation = 0.0
+    type = "clock"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000003.settings]
+        background = true
+        background_color = "surface"
+        background_opacity = 0.0
+        background_padding = 10
+        background_radius = 22
+        center_text = true
+        circle = true
+        clock_style = "digital"
+        color = "on_surface"
+        font_family = ""
+        format = "{:%H:%M}"
+        shadow = false
+        timezone = ""
+
+    [desktop_widgets.widget.desktop-widget-0000000000000004]
+    box_height = 112.0
+    box_width = 224.0
+    cx = 440.0
+    cy = 680.0
+    output = "eDP-1"
+    placement_height = 768.0
+    placement_width = 1360.0
+    rotation = 0.0
+    type = "sysmon"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000004.settings]
+        background = true
+        background_color = "surface"
+        background_opacity = 0.10000000000000001
+        background_padding = 10
+        background_radius = 12
+        color = "primary"
+        color2 = "secondary"
+        display = "graph"
+        font_family = ""
+        gauge_layout = "horizontal"
+        highlight_color = "error"
+        interface = ""
+        label_min_width = 0
+        network_speed_compact = false
+        network_speed_unit = "auto"
+        shadow = false
+        show_label = true
+        stat = "cpu_usage"
+        stat2 = "cpu_temp"
+
+    [desktop_widgets.widget.desktop-widget-0000000000000005]
+    box_height = 112.0
+    box_width = 224.0
+    cx = 920.0
+    cy = 680.0
+    output = "eDP-1"
+    placement_height = 768.0
+    placement_width = 1360.0
+    rotation = 0.0
+    type = "sysmon"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000005.settings]
+        background = true
+        background_color = "surface"
+        background_opacity = 0.10000000000000001
+        background_padding = 10
+        background_radius = 12
+        color = "primary"
+        color2 = "secondary"
+        display = "graph"
+        font_family = ""
+        gauge_layout = "horizontal"
+        highlight_color = "error"
+        interface = ""
+        label_min_width = 0
+        network_speed_compact = true
+        network_speed_unit = "auto"
+        shadow = false
+        show_label = true
+        stat = "net_rx"
+        stat2 = "net_tx"
+
+    [desktop_widgets.widget.desktop-widget-0000000000000006]
+    box_height = 112.0
+    box_width = 224.0
+    cx = 680.0
+    cy = 680.0
+    output = "eDP-1"
+    placement_height = 768.0
+    placement_width = 1360.0
+    rotation = 0.0
+    type = "sysmon"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000006.settings]
+        background = true
+        background_color = "surface"
+        background_opacity = 0.10000000000000001
+        background_padding = 10
+        background_radius = 12
+        color = "primary"
+        color2 = "secondary"
+        display = "graph"
+        font_family = ""
+        gauge_layout = "horizontal"
+        highlight_color = "error"
+        interface = ""
+        label_min_width = 0
+        network_speed_compact = false
+        network_speed_unit = "auto"
+        shadow = false
+        show_label = true
+        stat = "swap_pct"
+        stat2 = "gpu_usage"
+
+[location]
+auto_locate = true
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [ "lockscreen-login-box@eDP-1" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 680.0
+    cy = 586.0
+    output = "eDP-1"
+    placement_height = 768.0
+    placement_width = 1360.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+[notification]
+background_opacity = 0.4999999888241291
+
+[plugin_settings."h465855hgg/lyrics"]
+lyrics_sources = [ "lrclib", "spotify", "netease", "splayer", "qqmusic", "kugou", "qishui", "apple_music", "musixmatch" ]
+translation_language = "en"
+
+[plugin_settings."noctalia/mpvpaper"]
+video_directory = "/home/markjake/wallpapers"
+
+[plugin_settings."noctalia/wallhaven"]
+download_dir = "/home/markjake/wallpapers"
+
+[plugins]
+auto_update = "all"
+enabled = [ "noctalia/wallhaven", "h465855hgg/lyrics", "thepunkoff/pomodoro" ]
+
+[shell]
+app_icon_color = "error"
+clipboard_enabled = false
+settings_window_translucent = true
+
+    [shell.panel]
+    control_center_placement = "attached"
+    transparency_mode = "glass"
+
+[theme]
+builtin = "Noctalia"
+community_palette = "Zenbones"
+mode = "dark"
+pure_black_dark = true
+source = "wallpaper"
+wallpaper_scheme = "m3-content"
+
+    [theme.templates]
+    builtin_ids = [ "btop", "cava", "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "qt" ]
+    community_ids = [ "neovim" ]
+
+[wallpaper]
+directory = "/home/markjake/wallpapers"
+
+    [wallpaper.default]
+    path = "/home/markjake/wallpapers/wallhaven-4dp2g4.jpg"
+
+    [wallpaper.last]
+    path = "/home/markjake/wallpapers/wallhaven-4dp2g4.jpg"
+
+    [wallpaper.monitors.eDP-1]
+    path = "/home/markjake/wallpapers/wallhaven-4dp2g4.jpg"
+
+    [[wallpaper.favorite]]
+    path = "/home/markjake/wallpapers/wallhaven-k8jrq7.jpg"
+
+[widget.lrc]
+type = "shin/lrc:lrc"
+
+[widget.lyrics]
+hide_when_no_lyrics = true
+hide_when_paused = true
+type = "h465855hgg/lyrics:lyrics"
+
+[widget.media]
+enabled = false
+
+[widget.mpvpaper]
+type = "noctalia/mpvpaper:mpvpaper"
+
+[widget.session]
+glyph = "snowflake"
+
+[widget.wallhaven]
+type = "noctalia/wallhaven:wallhaven"
+
+[widget.widget]
+type = "thepunkoff/pomodoro:widget"
+
+[widget.widget_2]
+enabled = false
+type = "thepunkoff/pomodoro:widget"

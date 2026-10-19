@@ -1,0 +1,57 @@
+# Ignore everything in .config
+*
+
+# Keep this file
+!.gitignore
+
+# Core / desktop
+!bluetuith/
+!bluetuith/**
+!btop/
+!btop/**
+!cava/
+!cava/**
+!dconf/
+!dconf/**
+!easyeffects/
+!easyeffects/**
+!gtk-3.0/
+!gtk-3.0/**
+!gtk-4.0/
+!gtk-4.0/**
+
+# Shell / terminal
+!fish/
+!fish/**
+!ghostty/
+!ghostty/**
+!kitty/
+!kitty/**
+
+# Editors
+!nvim/
+!nvim/**
+
+# Window managers / desktop
+!hypr/
+!hypr/**
+!sway/
+!sway/**
+!waybar/
+!waybar/**
+!noctalia/
+!noctalia/**
+
+# Utilities
+!fuzzel/
+!fuzzel/**
+
+# KDE / application settings
+!dolphinrc
+!gwenviewrc
+!pavucontrol.ini
+
+# User directories
+!user-dirs.dirs
+!user-dirs.locale
+

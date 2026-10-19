@@ -1,0 +1,193 @@
+/* Keyframes */
+@keyframes blink-warning {
+    70% {
+        color: white;
+    }
+    to {
+        color: white;
+        background-color: orange;
+    }
+}
+
+@keyframes blink-critical {
+    70% {
+        color: white;
+    }
+    to {
+        color: white;
+        background-color: red;
+    }
+}
+
+/* Base */
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free";
+}
+
+#waybar {
+    background: rgba(28, 28, 28, 0.7);
+    color: white;
+    font-family: "SF Pro";
+    font-size: 14px;
+}
+
+/* =========================
+   General module spacing
+   ========================= */
+
+#battery,
+#clock,
+#custom-resources,
+#network,
+#pulseaudio,
+#temperature,
+#tray,
+#bluetooth {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+/* =========================
+   CAVA
+   ========================= */
+
+#custom-cava {
+    color: #89b4fa;
+    padding: 0 6px;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 11px;
+}
+
+/* =========================
+   Resources
+   ========================= */
+
+#custom-resources {
+    padding: 0 6px;
+    font-size: 14px;
+}
+
+/* =========================
+   Battery
+   ========================= */
+
+#battery {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    font-size: 14px;
+}
+
+#battery.warning {
+    color: orange;
+}
+
+#battery.critical {
+    color: red;
+}
+
+/* =========================
+   Clock
+   ========================= */
+
+#clock {
+    font-size: 14px;
+}
+
+/* =========================
+   Network
+   ========================= */
+
+#network {
+    font-size: 14px;
+}
+
+#network.disconnected {
+    color: orange;
+}
+
+/* =========================
+   Audio
+   ========================= */
+
+#pulseaudio {
+    font-size: 14px;
+}
+
+/* =========================
+   Bluetooth
+   ========================= */
+
+#bluetooth {
+    font-size: 14px;
+}
+
+/* =========================
+   Backlight
+   ========================= */
+
+#backlight {
+    padding: 0 6px;
+}
+
+/* =========================
+   Temperature
+   ========================= */
+
+#temperature {
+    font-size: 14px;
+}
+
+#temperature.critical {
+    color: red;
+}
+
+/* =========================
+   Tray
+   ========================= */
+
+#tray {
+    /* No additional styles */
+}
+
+/* =========================
+   Window
+   ========================= */
+
+#window {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* =========================
+   Workspaces
+   ========================= */
+
+#workspaces button {
+    border-top: 2px solid transparent;
+    padding-bottom: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    color: #888888;
+}
+
+#workspaces button.active {
+    color: white;
+}
+
+#workspaces button.focused {
+    border-color: #4c7899;
+    color: white;
+    background-color: #285577;
+}
+
+#workspaces button.urgent {
+    border-color: #c9545d;
+    color: #c9545d;
+}
+
