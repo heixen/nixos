@@ -47,7 +47,7 @@
     font-awesome
     font-awesome_5
     # nerd-fonts.droid-sans-mono
-    # nerd-fonts.fira-code
+    nerd-fonts.fira-code
     # (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono"]; })
     nerd-fonts.jetbrains-mono
   ];
@@ -72,6 +72,7 @@
   #sway
   # Very important for Wayland greeters / polkit agents / portals to work properly
   security.polkit.enable = true;
+  security.polkit.enablePkexecWrapper = true;
 
   # Enable xdg-desktop-portal (usually already on, but good to be explicit)
   xdg.portal = {
@@ -165,6 +166,8 @@
 
       ### compiler
       python315
+      brave
+      microsoft-edge
     ];
   };
   # in configuration.nix
@@ -177,7 +180,7 @@
   programs.thunar.enable = true;
   programs.xfconf.enable = true;
   services.tumbler.enable = true;
-  programs.thunar.plugins = with pkgs.xfce; [
+  programs.thunar.plugins = with pkgs; [
     thunar-archive-plugin
     thunar-volman
   ];
@@ -221,12 +224,19 @@
     playerctl
     mpvpaper
 
+    ##share wifi dep
+    linux-wifi-hotspot # provides create_ap
+    networkmanager # provides nmcli
+    iw # wireless device tools
+    iproute2 # provides ip
+    pkgs.polkit # provides pkexe
+
     #################################################
     # Editors & Documentation
     #################################################
     vim
     man-pages
-    linux-manual
+    # linux-manual
     tree-sitter
     #
     lazygit
