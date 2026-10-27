@@ -12,6 +12,7 @@
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
+  # boot.loader.systemd-boot.graceful = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos"; # Define your hostname
@@ -153,7 +154,6 @@
       mpv
       neovim
       vscode
-      nodejs_24
       libreoffice
       tree
       #### for waybar
@@ -165,13 +165,11 @@
       spotify
 
       ### compiler
-      python315
       brave
-      microsoft-edge
     ];
   };
   # in configuration.nix
-  services.flatpak.enable = true;
+  # services.flatpak.enable = true;
 
   # Install firefox.
   programs.firefox.enable = true;
@@ -208,8 +206,8 @@
     foot
     wofi
     fuzzel
-    swaylock
-    swayidle
+    # swaylock
+    # swayidle
     wlsunset
     slurp
     grim
@@ -223,13 +221,6 @@
     peaclock
     playerctl
     mpvpaper
-
-    ##share wifi dep
-    linux-wifi-hotspot # provides create_ap
-    networkmanager # provides nmcli
-    iw # wireless device tools
-    iproute2 # provides ip
-    pkgs.polkit # provides pkexe
 
     #################################################
     # Editors & Documentation
@@ -277,8 +268,8 @@
     cmake-lint
 
     # Python
-    pyright
-    python3Packages.python-lsp-server
+    # pyright
+    # python3Packages.python-lsp-server
 
     # Lua & formatter
     lua-language-server
@@ -328,11 +319,6 @@
     bluetuith
 
     #################################################
-    # Networking
-    #################################################
-    nmap
-
-    #################################################
     # others
     #################################################
     gnome-calculator
@@ -341,7 +327,6 @@
     fd
     cronie
     bat
-    cbonsai
 
     #################################################
     # cursor
@@ -354,7 +339,6 @@
     #################################################
     adwaita-icon-theme
     hicolor-icon-theme
-
   ];
 
   nix.gc = {

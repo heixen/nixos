@@ -16,7 +16,8 @@ order = [ "default" ]
         "brightness",
         "battery",
         "control-center",
-        "session"
+        "session",
+        "toggle"
     ]
     margin_ends = 0
     radius = 0
@@ -55,7 +56,7 @@ widget_order = [
     box_height = 48.0
     box_width = 128.0
     cx = 680.0
-    cy = 384.0
+    cy = 584.0
     output = "eDP-1"
     placement_height = 768.0
     placement_width = 1360.0
@@ -241,6 +242,10 @@ widget_order = [ "lockscreen-login-box@eDP-1" ]
 [notification]
 background_opacity = 0.4999999888241291
 
+[plugin_settings."cleboost/hotspot"]
+password = "11111110"
+ssid = "zxcv"
+
 [plugin_settings."h465855hgg/lyrics"]
 lyrics_sources = [ "lrclib", "spotify", "netease", "splayer", "qqmusic", "kugou", "qishui", "apple_music", "musixmatch" ]
 translation_language = "en"
@@ -253,7 +258,7 @@ download_dir = "/home/markjake/wallpapers"
 
 [plugins]
 auto_update = "all"
-enabled = [ "noctalia/wallhaven", "h465855hgg/lyrics", "thepunkoff/pomodoro" ]
+enabled = [ "noctalia/wallhaven", "thepunkoff/pomodoro", "h465855hgg/lyrics" ]
 
 [shell]
 app_icon_color = "error"
@@ -280,13 +285,13 @@ wallpaper_scheme = "m3-content"
 directory = "/home/markjake/wallpapers"
 
     [wallpaper.default]
-    path = "/home/markjake/wallpapers/wallhaven-4dp2g4.jpg"
+    path = "/home/markjake/wallpapers/d.jpg"
 
     [wallpaper.last]
-    path = "/home/markjake/wallpapers/wallhaven-4dp2g4.jpg"
+    path = "/home/markjake/wallpapers/d.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/markjake/wallpapers/wallhaven-4dp2g4.jpg"
+    path = "/home/markjake/wallpapers/d.jpg"
 
     [[wallpaper.favorite]]
     path = "/home/markjake/wallpapers/wallhaven-k8jrq7.jpg"
@@ -305,8 +310,18 @@ enabled = false
 [widget.mpvpaper]
 type = "noctalia/mpvpaper:mpvpaper"
 
+[widget.network]
+show_label = false
+
 [widget.session]
 glyph = "snowflake"
+
+[widget.sysmon]
+show_value = false
+stat = "disk_used"
+
+[widget.toggle]
+type = "cleboost/hotspot:toggle"
 
 [widget.wallhaven]
 type = "noctalia/wallhaven:wallhaven"
