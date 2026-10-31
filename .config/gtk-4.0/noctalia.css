@@ -4,9 +4,12 @@
 * stylelint-disable at-rule-no-unknown
 */
 
-@define-color accent_color #e1edfc;
-@define-color accent_bg_color #e1edfc;
-@define-color accent_fg_color #26323c;
+/* App-scoped CSS of enabled community GTK extensions; Noctalia maintains this file. */
+@import url("noctalia-extensions.css");
+
+@define-color accent_color #5ad4ff;
+@define-color accent_bg_color #5ad4ff;
+@define-color accent_fg_color #003544;
 
 @define-color destructive_bg_color #ffb4ab;
 @define-color destructive_fg_color #690005;
@@ -15,34 +18,34 @@
 @define-color error_fg_color #690005;
 
 @define-color window_bg_color #000000;
-@define-color window_fg_color #e4e2e2;
+@define-color window_fg_color #dee3e7;
 
 @define-color view_bg_color #000000;
-@define-color view_fg_color #e4e2e2;
+@define-color view_fg_color #dee3e7;
 
 @define-color headerbar_bg_color #000000;
-@define-color headerbar_fg_color #e4e2e2;
+@define-color headerbar_fg_color #dee3e7;
 @define-color headerbar_backdrop_color @window_bg_color;
 
-@define-color popover_bg_color #131414;
-@define-color popover_fg_color #e4e2e2;
+@define-color popover_bg_color #0f1417;
+@define-color popover_fg_color #dee3e7;
 
-@define-color card_bg_color #131414;
-@define-color card_fg_color #e4e2e2;
+@define-color card_bg_color #0f1417;
+@define-color card_fg_color #dee3e7;
 
 @define-color dialog_bg_color #000000;
-@define-color dialog_fg_color #e4e2e2;
+@define-color dialog_fg_color #dee3e7;
 
-@define-color overview_bg_color #131414;
-@define-color overview_fg_color #e4e2e2;
+@define-color overview_bg_color #0f1417;
+@define-color overview_fg_color #dee3e7;
 
-@define-color sidebar_bg_color #131414;
-@define-color sidebar_fg_color #e4e2e2;
+@define-color sidebar_bg_color #0f1417;
+@define-color sidebar_fg_color #dee3e7;
 @define-color sidebar_backdrop_color @window_bg_color;
 @define-color sidebar_border_color @window_bg_color;
 
 @define-color secondary_sidebar_bg_color #000000;
-@define-color secondary_sidebar_fg_color #e4e2e2;
+@define-color secondary_sidebar_fg_color #dee3e7;
 
 /* Focused selection states */
 @define-color theme_selected_bg_color @accent_bg_color;
@@ -57,9 +60,9 @@
 @define-color theme_unfocused_selected_fg_color @accent_fg_color;
 
 :root {
-    --accent-color: #e1edfc;
-    --accent-bg-color: #e1edfc; 
-    --accent-fg-color: #26323c;
+    --accent-color: #5ad4ff;
+    --accent-bg-color: #5ad4ff; 
+    --accent-fg-color: #003544;
 
     --destructive-bg-color: #ffb4ab;
     --destructive-fg-color: #690005;
@@ -69,39 +72,39 @@
     --error-color: #ffb4ab;
 
     --window-bg-color: #000000;
-    --window-fg-color: #e4e2e2;
+    --window-fg-color: #dee3e7;
 
     --view-bg-color: #000000;
-    --view-fg-color: #e4e2e2;
+    --view-fg-color: #dee3e7;
 
     --headerbar-bg-color: #000000;
-    --headerbar-fg-color: #e4e2e2;
+    --headerbar-fg-color: #dee3e7;
     --headerbar-backdrop-color: @window_bg_color;
 
-    --popover-bg-color: #131414;
-    --popover-fg-color: #e4e2e2;
+    --popover-bg-color: #0f1417;
+    --popover-fg-color: #dee3e7;
 
-    --card-bg-color: #131414;
-    --card-fg-color: #e4e2e2;
+    --card-bg-color: #0f1417;
+    --card-fg-color: #dee3e7;
 
     --dialog-bg-color: #000000;
-    --dialog-fg-color: #e4e2e2;
+    --dialog-fg-color: #dee3e7;
 
-    --overview-bg-color: #131414;
-    --overview-fg-color: #e4e2e2;
+    --overview-bg-color: #0f1417;
+    --overview-fg-color: #dee3e7;
 
-    --sidebar-bg-color: #131414;
-    --sidebar-fg-color: #e4e2e2;
+    --sidebar-bg-color: #0f1417;
+    --sidebar-fg-color: #dee3e7;
     --sidebar-backdrop-color: @window_bg_color;
     --sidebar-border-color: @window_bg_color;
 
-    --warning-bg-color: #dccadd;
-    --warning-fg-color: #615464;
-    --warning-color: #f9e6fa;
+    --warning-bg-color: #cc90ea;
+    --warning-fg-color: #592376;
+    --warning-color: #e7b4ff;
 
-    --success-color: #c3c7cd;
-    --success-bg-color: #45494e;
-    --success-fg-color: #b5b9be;
+    --success-color: #a2cde0;
+    --success-bg-color: #204c5c;
+    --success-fg-color: #91bbce;
     
     --shade-color: rgba(0, 0, 0, 0.36);
 }

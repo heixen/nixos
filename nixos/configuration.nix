@@ -5,7 +5,14 @@
   ];
 
   hardware.bluetooth.enable = true;
-  hardware.graphics.enable = true;
+
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+    extraPackages = with pkgs; [
+      intel-media-driver
+    ];
+  };
 
   services.power-profiles-daemon.enable = true;
   services.upower.enable = true;
@@ -137,6 +144,13 @@
   #   enableExtensionPack = true;
   # };
 
+  # steam
+  # programs.steam = {
+  #   enable = true;
+  #   remotePlay.openFirewall = true;
+  #   dedicatedServer.openFirewall = true;
+  # };
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.markjake = {
     isNormalUser = true;
@@ -153,7 +167,6 @@
       kitty
       mpv
       neovim
-      vscode
       libreoffice
       tree
       #### for waybar
